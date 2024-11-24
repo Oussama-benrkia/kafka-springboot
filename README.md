@@ -6,12 +6,12 @@ This project contains two microservices that communicate using Kafka. The first 
 ## Microservices Overview
 
 - **Producer (Port 8088)**: 
-  - The Producer sends messages to a Kafka topic.
-  - It connects to a Kafka broker and writes messages to a specified topic.
+  - The Producer sends User, to a Kafka topic.
+  - It connects to a Kafka broker and writes User to a specified topic *KFK*.
 
 - **Consumer (Port 8089)**: 
-  - The Consumer listens for messages on the Kafka topic.
-  - It connects to the Kafka broker and consumes messages from the topic.
+  - The Consumer listens for Users on the Kafka topic.
+  - It connects to the Kafka broker and consumes users from the topic *KFK*.
 
 ## Kafka Commands
 
