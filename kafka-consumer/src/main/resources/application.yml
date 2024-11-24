@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:kafka1
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+  application:
+    name: kafka-consumer
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: mygroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+          spring.json.trusted.packages: '*'
+server:
+  port: 8089
+
+
